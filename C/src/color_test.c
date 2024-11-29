@@ -1,9 +1,10 @@
 #include "terminal_colors.h"
 #include <stdio.h>
 
-
 int main(void) {
+   #ifdef COLORS_ENABLED
    colorTest();
+   #endif
 
    return 0;
 }
@@ -18,6 +19,6 @@ void colorTest(void) {
       printf(RESET);
    }
 
-   printf(RESET"\n");
+   printf(RESET"\n");   // Newline critical to make sure RESET is flushed to stdout
    return;
 }

@@ -6,6 +6,9 @@ Other languages may not use #define in the same way, and may not use the same es
 Helpful image (with more colors) at url https://i.stack.imgur.com/9UVnC.png
 */
 
+#define COLORS_ENABLED
+
+#define GENERIC_PRINTF_CODE "\033[%dm"  // Very cursed, and very bad practice. But it's kind of fun.
 
 /* FOREGROUND (IE TEXT) COLOR */
 #define BLK "\033[30m"
@@ -17,7 +20,7 @@ Helpful image (with more colors) at url https://i.stack.imgur.com/9UVnC.png
 #define CYN	"\033[36m"
 #define WHT	"\033[37m"
 // non standard colors below. They may not all be supported.
-#define BRBLK	"\033[90m"	// also known as "bright black
+#define BRBLK	"\033[90m"	// also known as "bright black"
 #define GRY	BRBLK
 #define BRWHT	"\033[97m"
 
@@ -46,3 +49,5 @@ Helpful image (with more colors) at url https://i.stack.imgur.com/9UVnC.png
 #define BACKGROUND_END_INDEX 47
 
 void colorTest(void);
+void colorExample(void);
+void rainbows(char* string, int printNewline);
